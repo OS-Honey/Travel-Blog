@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f5f1; 
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+header {
+    background-color: #ff6f61; 
+    color: white;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo h1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-family: 'Merriweather', serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff9e7d; 
+}
+
+
+.hero {
+    position: relative; 
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    height: 60vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    border-radius: 10px;
+    z-index: 1; 
+}
+
+.hero h1, .hero p {
+    position: relative; 
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+
+.featured {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.featured-post {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.featured-post img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.featured-post:hover img {
+    transform: scale(1.05);
+}
+
+.featured-post h3 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    font-family: 'Merriweather', serif;
+}
+
+.featured-post p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.featured-post a {
+    color: #ff6f61;
+    font-weight: bold;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.featured-post a:hover {
+    color: #ff9e7d;
+}
+
+
+.cta .btn {
+    background-color: #ff6f61;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    display: inline-block;
+    margin-top: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.cta .btn:hover {
+    background-color: #ff9e7d;
+}
+
+
+.about-me {
+    text-align: center;  
+    padding: 50px 20px;  
+}
+
+.about-me img {
+    max-width: 80%; 
+    height: auto;  
+    border-radius: 10px;  
+    margin-top: 20px;  
+    margin-bottom: 20px;  
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+
+.blog-posts {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.blog-posts .post {
+    margin-bottom: 40px;
+}
+
+
+.post-content {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.post-content img {
+    width: 40%; 
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px; 
+}
+
+.text-content {
+    width: 55%; 
+    text-align: left;
+}
+
+.text-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.text-content a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.text-content a:hover {
+    text-decoration: underline;
+}
+
+
+.blog-posts .post:nth-child(odd) .post-content {
+    flex-direction: row; 
+}
+
+.blog-posts .post:nth-child(even) .post-content {
+    flex-direction: row-reverse; 
+}
+
+
+/* Contact Page Styles */
+.contact-form-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+}
+
+.contact-form-section h1 {
+    font-size: 2.5rem;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 20px;
+}
+
+.contact-form-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+/* Contact Form Container */
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Form Styling */
+form label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    text-align: left;
+    display: block;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    outline: none;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+}
+
+form button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ff9e7d;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff6f61;
+}
+
+
+@media (max-width: 768px) {
+    .featured {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-post {
+        width: 80%;
+    }
+    .contact-form-container {
+        width: 90%;
+    }
+
+    .contact-form-section h1 {
+        font-size: 2rem;
+    }
+
+    .contact-form-section p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Add this to ensure the viewport is properly set for mobile devices */
+@media only screen and (max-width: 768px) {
+    /* Make header elements stack vertically */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .featured {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-post {
+        width: 90%;  /* Full width for mobile */
+        margin-bottom: 20px;
+    }
+
+    .cta .btn {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+
+    .about-me {
+        padding: 20px;
+    }
+
+    .about-me img {
+        width: 100%;  /* Make image responsive */
+    }
+
+    .blog-posts .post-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .post-content img {
+        width: 80%;  /* Adjust image size */
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .text-content {
+        width: 100%; /* Make text content full width */
+        text-align: center;
+    }
+
+    .text-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-content p {
+        font-size: 1rem;
+    }
+    
+    /* Contact Form */
+    .contact-form-container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .contact-form-container form input,
+    .contact-form-container form textarea {
+        width: 100%; /* Ensure form elements stretch on mobile */
+        padding: 10px;
+    }
+}
